@@ -1,5 +1,5 @@
 # Achievement
-- Know how to delcare variables using var, let, and cosnt.
+- Know how to declare varibles using `var`, `let`, and `const`
 - Understand the different data types in javascript
-- Know The **Typeof** operator to identify the data types of a variable
-- Understand the concept of varible reassignment and the immuntability of **const** variable
+- Understan the use of `typeOf` operator to identify the data type of a varible.
+- Understand the concept of variable reassignment and the immuntability of `const` variables
