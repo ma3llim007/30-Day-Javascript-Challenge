@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting and manipulating Elements</title>
+</head>
+
+<body>
+    <h1 id="taskId">Task:- </h1>
+    <div class="bg-red">
+        <h1>Task:- 02 Change The background Color</h1>
+    </div>
+    <script>
+        // TASK:01: Select an HTML Element by its ID and Change its text content
+        let Id = document.getElementById("taskId");
+        Id.textContent = 'Task 01 :- Change The Text Content'
+
+        // TASK 02: Select an HTML Element by its class and Change its background color.
+        let Div = document.querySelector(".bg-red");
+        Div.style.backgroundColor = "green"
+        console.log(Div);
+    </script>
+</body>
+
+</html>

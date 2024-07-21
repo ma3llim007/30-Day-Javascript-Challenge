@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        #border {
+            border: 5px solid red;
+            cursor: grab;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Default Text</h1>
+        <button>Change</button>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="border">
+        <h1>Border Color Chanage on MouseOVer</h1>
+    </div>
+
+    <!-- Task 09: Add a click Event listener to a button that chanages the text content of a paragraph -->
+    <script>
+        let button = document.querySelector("button");
+        function changeParagraph() {
+            let h1 = document.querySelector("h1");
+            if (h1.innerText === 'Default Text') {
+                h1.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ex ut doloribus animi accusantium, hic nihil laudantium harum eum earum itaque optio quisquam pariatur molestiae. Adipisci voluptatem sed optio sint.";
+            } else {
+                h1.innerText = 'Default Text';
+            }
+        }
+        button.addEventListener("click", changeParagraph)
+    </script>
+
+    <!-- Task 10: Add a MouseOver Event listener to an element that changes its border color -->
+    <script>
+        let border = document.getElementById("border");
+        function changeBorder(){
+            border.style.borderColor = "green";
+        }
+        border.addEventListener("mouseover", changeBorder);
+
+        border.addEventListener("mouseout",function(){
+            border.style.borderColor = "red";
+        })
+    </script>
+</body>
+
+</html>

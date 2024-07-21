@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying Attributes And class</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="" alt="">
+    <section class="sectionTwo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit veritatis, ducimus reiciendis ipsum
+        earum ipsa doloribus officia quod iure quis consequatur eum omnis beatae harum temporibus voluptatibus
+        accusantium explicabo.
+    </section>
+
+    <!-- Task 07: select an html element and change one of its attributes -->
+    <script>
+        let img = document.querySelector("img");
+        img.src = 'https://tpc.googlesyndication.com/simgad/8617651471299567650';
+        img.alt = 'Image Not Found';
+    </script>
+
+    <!-- Task 08: add and remove a css class to / from an html element -->
+    <script>
+        const addClass = () => {
+            let element = document.querySelector(".sectionTwo");
+            element.classList.add("highlight");
+        }
+        const removeClass = () => {
+            let element = document.querySelector(".sectionTwo");
+            element.classList.remove("highlight");
+        }
+
+        removeClass()
+        addClass()
+    </script>
+</body>
+
+</html>

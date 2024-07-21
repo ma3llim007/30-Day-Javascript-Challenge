@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Elements</title>
+</head>
+
+<body>
+    <section class="sectionOne">
+        <h1>Task 05: Select an HTML Element and remove it from the DOM</h1>
+        <h1 id="RemoveH1">Remove H1 From DOM</h1>
+    </section>
+    <div class="sectionTwo">
+        <h1>Task 06: Remove the last child of a specific HTML Element</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+
+    <!-- Task 05: Select an HTML Element and remove it from the DOM -->
+    <script>
+        let removeElem = document.querySelector("#RemoveH1");
+        removeElem.remove();
+    </script>
+    <!-- Task 06: Remove the last child of a specific HTML Element -->
+    <script>
+        let removeElemLast = document.querySelector("ul").lastElementChild;
+        removeElemLast.remove();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating And Appending Elements</title>
+</head>
+
+<body>
+    <section id="Section">
+
+    </section>
+    <section id="SectionTwo">
+        <p>Task 04: Create a new li element and add it to an existing ul list</p>
+    </section>
+
+    <!-- Task 03: Create a new div element with some textContent and append it to the body. -->
+    <script>
+        let Section = document.getElementById("Section");
+        let newDiv = document.createElement("div");
+        newDiv.textContent = "Task 03: Create a new div element with some textContent and append it to the body."
+        Section.append(newDiv)
+    </script>
+
+    <!-- Task 04: Create a new li element and add it to an existing ul list. -->
+    <script>
+        let SectionTwo = document.getElementById("SectionTwo");
+        let ul = document.createElement("ul");
+        for (let i = 1; i <= 10; i++) {
+            let li = document.createElement("li");
+            li.innerText = `Item ${i}`;
+            ul.append(li);
+        }
+        SectionTwo.append(ul);
+    </script>
+</body>
+
+</html>
