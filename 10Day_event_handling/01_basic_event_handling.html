@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Event Handling</title>
+</head>
+
+<body>
+    <h1 id="Task01">Default Text</h1>
+    <button id="Task01Button">Task 01</button>
+    <br><br>
+    <hr><br><br>
+    <button id="Task02Button">Task 02</button>
+    <div id="ShowImageDiv"></div>
+
+    <!-- Task 01: Add a click Event listener to a button that changes the text content of a paragraph -->
+    <script>
+        let Task01 = document.getElementById("Task01");
+        let Task01Button = document.getElementById("Task01Button");
+        Task01Button.addEventListener("click", function () {
+            if (Task01.innerText === 'Default Text') {
+                Task01.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloremque eum, dolores sint fugit sapiente consequatur minima accusantium blanditiis suscipit ducimus dolore omnis magni iusto provident assumenda. Distinctio, dolorem corrupti!";
+            } else {
+                Task01.innerText = "Default Text";
+            }
+        });
+    </script>
+
+    <!-- Task 02: Add a double-click event listener to an image that toggles its visibility -->
+    <script>
+        let Task02Button = document.getElementById("Task02Button");
+        Task02Button.addEventListener("dblclick", function () {
+            let div = document.getElementById("ShowImageDiv");
+            let image = "https://images.pexels.com/photos/10147934/pexels-photo-10147934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+            let imageElement = document.createElement("img");
+            imageElement.id = "image";
+            imageElement.src = image;
+
+            if (div.innerHTML === '<img id="image" src="https://images.pexels.com/photos/10147934/pexels-photo-10147934.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1">') {
+                let ImageId = document.getElementById("image");
+                div.removeChild(ImageId)
+            } else {
+                div.append(imageElement);
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

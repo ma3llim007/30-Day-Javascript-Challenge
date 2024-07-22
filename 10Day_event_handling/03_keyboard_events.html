@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            margin-top: 1.5rem;
+            width: 50%;
+            padding: 0.5rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .paraDiv {
+            width: 50%;
+            font-size: 2rem;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="name" id="name" placeholder="Enter The Text">
+    <hr width="100%">
+    <div class="paraDiv"></div>
+    <script>
+        let inputElement = document.getElementById("name");
+        // Task 05: Add a keydown Event listener to an input field that logs the key pressed to the console.
+        inputElement.addEventListener("keydown", function () {
+            console.log(`keydown ` + inputElement.value);
+        });
+
+        // Task 05: Add a keyup Event listener to an input field that displays the current value in a paragraph.
+        let paraElement = document.createElement("p");
+        inputElement.addEventListener("keyup", function () {
+            let value = '';
+            value = inputElement.value;
+            paraElement.innerText = value;
+        });
+        document.querySelector(".paraDiv").appendChild(paraElement)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <ul class="nineTask">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>react</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <div id="parentDiv">
+        <button id="addButton">Add List Item</button>
+        <ul id="myList">
+        </ul>
+    </div>
+    <script>
+        // Task 09: Add a click Event listener to a list that logs the text content of the clicked list item using Event Delegation
+        let nineTaskElement = document.querySelector(".nineTask");
+        nineTaskElement.addEventListener("click", function (e) {
+            if (e.target && e.target.nodeName === 'LI') {
+                console.log(e.target.textContent);
+            }
+        });
+
+        // Task 10: add an Event listener to a parent element that listens for Events from dynamically added child element
+        let addButton = document.getElementById("addButton");
+        addButton.addEventListener("click", function () {
+            let ulList = document.getElementById("myList");
+            let liElement = document.createElement("li");
+            liElement.textContent = `Item ${document.querySelectorAll("#myList li").length + 1}`;
+            ulList.append(liElement);
+        });
+    </script>
+</body>
+
+</html>

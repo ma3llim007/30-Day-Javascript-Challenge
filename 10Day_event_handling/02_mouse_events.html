@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        #Task03{
+            border: 3px solid black;
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Task03">
+
+    </div>
+
+    <script>
+        let Task03Element = document.getElementById("Task03");
+        
+        // Task 03: add a mouseover event listener to an element that changes its background color
+        Task03Element.addEventListener("mouseover",function(){
+            Task03Element.style.backgroundColor = "red";
+        });
+
+        // Task 04: add a mouseout event listener to an element that resets its background color.
+        Task03Element.addEventListener("mouseout",function(){
+            Task03Element.style.backgroundColor = "";
+        });
+    </script>
+
+</body>
+
+</html>
